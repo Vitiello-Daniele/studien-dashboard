@@ -20,6 +20,7 @@ class Pruefungsleistung:
         status: Leistungsstatus = Leistungsstatus.unbekannt,
     ) -> None:
         self.aktualisieren(name, note, status)
+        self._modul = None
 
     @property
     def name(self) -> str:
