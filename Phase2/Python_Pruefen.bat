@@ -52,11 +52,24 @@ echo     [test] öffentliche zugriffe auf zuordnungen schützen
 echo     [test] lebensdauer bei vorhandener referenz prüfen
 echo     [test] semesterzuordnung der studiendaten übernehmen
 echo(
+echo [3] arbeitspaket 3: datenübergang zu json
+echo     [test] datum, studienmodell und anteil übernehmen
+echo     [test] unpassende angaben zur studienphase zurückweisen
+echo     [test] direkten schreibzugriff auf die studienphase verhindern
+echo     [test] enum und datum als text, fehlende note als null speichern
+echo     [test] werte nach dem speichern in neuen objekten erhalten
+echo     [test] unbekannte enumwerte beim laden zurückweisen
+echo     [test] ungültige datumswerte beim laden zurückweisen
+echo     [test] unvollständige oder falsch aufgebaute daten zurückweisen
+echo     [test] fachregeln auch beim laden prüfen
+echo     [test] vorhandene studienphasen unverändert übernehmen
+echo(
 echo [q] beenden
 echo(
-choice /c 012q /n /m "welche tests möchtest du ausführen [0-2, q]? "
+choice /c 0123q /n /m "welche tests möchtest du ausführen [0-3, q]? "
 if errorlevel 255 goto auswahl_fehler
-if errorlevel 4 goto ende
+if errorlevel 5 goto ende
+if errorlevel 4 goto arbeitspaket_3
 if errorlevel 3 goto arbeitspaket_2
 if errorlevel 2 goto arbeitspaket_1
 if errorlevel 1 goto alle
@@ -75,6 +88,11 @@ goto testen
 :arbeitspaket_2
 set "phase2Auswahl=arbeitspaket 2: objektbeziehungen"
 set "phase2Muster=test_objektbeziehungen.py"
+goto testen
+
+:arbeitspaket_3
+set "phase2Auswahl=arbeitspaket 3: datenübergang zu json"
+set "phase2Muster=test_datenuebergang.py"
 
 :testen
 echo(
