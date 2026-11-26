@@ -2,10 +2,9 @@
 setlocal EnableExtensions DisableDelayedExpansion
 chcp 65001 >nul
 title Phase 1 - Python-Prüfung
-set "phase1Python=%APPDATA%\uv\python\cpython-3.13.14-windows-x86_64-none\python.exe"
 pushd "%~dp0"
 if errorlevel 1 goto ordner_fehler
-if not exist "%phase1Python%" goto python_fehler
+if not exist "%~dp0..\Phase3\Python_Ausfuehren.bat" goto python_fehler
 
 :pruefen
 echo(
@@ -13,23 +12,24 @@ echo ============================================================
 echo   MEIN STUDIEN-DASHBOARD - PYTHON-PRÜFUNG
 echo ============================================================
 echo(
-"%phase1Python%" --version
+call "%~dp0..\Phase3\Python_Ausfuehren.bat" --version
 if errorlevel 1 goto fehlgeschlagen
 echo(
 echo [1/2] Speichern und Wiedereinlesen der Studiendaten
 echo ------------------------------------------------------------
-"%phase1Python%" -B -X utf8 "machbarkeit\probe_speicherung.py"
+call "%~dp0..\Phase3\Python_Ausfuehren.bat" "machbarkeit\probe_speicherung.py"
 if errorlevel 1 goto fehlgeschlagen
 echo [OK] Speichertest bestanden. Die Quelldatei ist unverändert.
 echo(
 echo [2/2] Automatische Tests für Berechnungen und Oberfläche
 echo ------------------------------------------------------------
-"%phase1Python%" -B -X utf8 "machbarkeit\test_machbarkeit.py" -q
+call "%~dp0..\Phase3\Python_Ausfuehren.bat" "machbarkeit\test_machbarkeit.py" -q
 if errorlevel 1 goto fehlgeschlagen
 echo(
 echo ============================================================
 echo   ERGEBNIS: ALLE PRÜFUNGEN BESTANDEN
 echo ============================================================
+if /i "%~1"=="--ohne-pause" goto ende
 
 :menue
 echo(
@@ -47,17 +47,15 @@ goto ende
 echo(
 echo Das Dashboard wird geöffnet. Zum Menü zurück: Fenster schließen.
 echo Für den Vergleich mit dem Konzept den Stichtag 2026-10-09 verwenden.
-"%phase1Python%" -B -X utf8 "machbarkeit\probe_gui.py"
+call "%~dp0..\Phase3\Python_Ausfuehren.bat" "machbarkeit\probe_gui.py"
 if errorlevel 1 goto fehlgeschlagen
 echo [OK] Dashboard beendet.
 goto menue
 
 :python_fehler
 echo(
-echo [FEHLER] Das eingerichtete Python 3.13.14 wurde nicht gefunden:
-echo "%phase1Python%"
-echo Prüfe den Installationspfad in der Zeile mit phase1Python.
-echo Es wurde nichts installiert oder heruntergeladen.
+echo [FEHLER] Die gemeinsame Python-Startdatei in Phase3 fehlt.
+echo Bitte das gesamte Projekt entpacken und die Ordnerstruktur beibehalten.
 goto fehler_ende
 
 :fehlgeschlagen
@@ -72,13 +70,13 @@ echo Die genaue Meldung steht oberhalb. Bei Bedarf den Text kopieren.
 :fehler_ende
 echo(
 echo Zum Schließen eine Taste drücken.
-pause >nul
+if /i not "%~1"=="--ohne-pause" pause >nul
 popd
 exit /b 1
 
 :ordner_fehler
 echo [FEHLER] Der Ordner der Startdatei konnte nicht geöffnet werden.
-pause
+if /i not "%~1"=="--ohne-pause" pause
 exit /b 1
 
 :ende

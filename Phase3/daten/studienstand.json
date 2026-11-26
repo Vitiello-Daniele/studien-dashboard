@@ -1,0 +1,408 @@
+{
+  "herkunft": {
+    "art": "eigene leistungsübersicht",
+    "stand": "2026-11-25"
+  },
+  "studiengang": {
+    "name": null,
+    "beginn": "2024-01-01",
+    "vollzeitdauer_monate": 36,
+    "zielnote": 2.0,
+    "gesamt_ects": 180,
+    "leistungsstand_vollstaendig": true,
+    "studienphasen": [
+      {
+        "beginn": "2024-01-01",
+        "modell": "teilzeit",
+        "vollzeitanteil": 0.75
+      },
+      {
+        "beginn": "2024-06-01",
+        "modell": "vollzeit",
+        "vollzeitanteil": 1.0
+      }
+    ],
+    "semester": [
+      {
+        "nummer": 1
+      },
+      {
+        "nummer": 2
+      },
+      {
+        "nummer": 3
+      },
+      {
+        "nummer": 4
+      },
+      {
+        "nummer": 5
+      },
+      {
+        "nummer": 6
+      }
+    ],
+    "module": [
+      {
+        "titel": "DevOps und Continuous Delivery",
+        "ects": 5,
+        "semester": 5,
+        "pruefungsleistungen": [
+          {
+            "name": "DevOps und Continuous Delivery",
+            "note": 1.3,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "Projekt: Software Development",
+        "ects": 5,
+        "semester": 5,
+        "pruefungsleistungen": [
+          {
+            "name": "Projekt: Software Development",
+            "note": 1.3,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "Einführung in die Programmierung mit Python",
+        "ects": 5,
+        "semester": 5,
+        "pruefungsleistungen": [
+          {
+            "name": "Einführung in die Programmierung mit Python",
+            "note": 2,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "Gestaltung und Ergonomie von User Interfaces",
+        "ects": 5,
+        "semester": 5,
+        "pruefungsleistungen": [
+          {
+            "name": "Gestaltung und Ergonomie von User Interfaces",
+            "note": 1.7,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "Projekt: Mobile Software Engineering",
+        "ects": 5,
+        "semester": 4,
+        "pruefungsleistungen": [
+          {
+            "name": "Projekt: Mobile Software Engineering",
+            "note": 2,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "IT-Servicemanagement",
+        "ects": 5,
+        "semester": 4,
+        "pruefungsleistungen": [
+          {
+            "name": "IT-Servicemanagement",
+            "note": 2.3,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "Projekt: Cloud Programming",
+        "ects": 5,
+        "semester": 4,
+        "pruefungsleistungen": [
+          {
+            "name": "Projekt: Cloud Programming",
+            "note": 1.3,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "Einführung in Datenschutz und IT-Sicherheit",
+        "ects": 5,
+        "semester": 4,
+        "pruefungsleistungen": [
+          {
+            "name": "Einführung in Datenschutz und IT-Sicherheit",
+            "note": 2.7,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "IT-Infrastruktur",
+        "ects": 5,
+        "semester": 4,
+        "pruefungsleistungen": [
+          {
+            "name": "IT-Infrastruktur",
+            "note": 1.7,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "Projekt: Agiles Software Engineering",
+        "ects": 5,
+        "semester": 4,
+        "pruefungsleistungen": [
+          {
+            "name": "Projekt: Agiles Software Engineering",
+            "note": 1,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "Techniken und Methoden der agilen Softwareentwicklung",
+        "ects": 5,
+        "semester": 3,
+        "pruefungsleistungen": [
+          {
+            "name": "Techniken und Methoden der agilen Softwareentwicklung",
+            "note": 3,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "Seminar Software Engineering",
+        "ects": 5,
+        "semester": 3,
+        "pruefungsleistungen": [
+          {
+            "name": "Seminar Software Engineering",
+            "note": 1.3,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "IT-Projektmanagement",
+        "ects": 5,
+        "semester": 3,
+        "pruefungsleistungen": [
+          {
+            "name": "IT-Projektmanagement",
+            "note": 1.3,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "Programmierung von industriellen Informationssystemen mit Java EE",
+        "ects": 5,
+        "semester": 3,
+        "pruefungsleistungen": [
+          {
+            "name": "Programmierung von industriellen Informationssystemen mit Java EE",
+            "note": 2.3,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "Mobile Software Engineering",
+        "ects": 5,
+        "semester": 3,
+        "pruefungsleistungen": [
+          {
+            "name": "Mobile Software Engineering",
+            "note": 2,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "Ethik und Nachhaltigkeit in der IT",
+        "ects": 5,
+        "semester": 3,
+        "pruefungsleistungen": [
+          {
+            "name": "Ethik und Nachhaltigkeit in der IT",
+            "note": 3,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "Algorithmen, Datenstrukturen und Programmiersprachen",
+        "ects": 5,
+        "semester": 2,
+        "pruefungsleistungen": [
+          {
+            "name": "Algorithmen, Datenstrukturen und Programmiersprachen",
+            "note": 1,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "Datenstruktur und Java-Klassenbibliothek",
+        "ects": 5,
+        "semester": 2,
+        "pruefungsleistungen": [
+          {
+            "name": "Datenstruktur und Java-Klassenbibliothek",
+            "note": 1,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "Qualitätssicherung im Softwareprozess",
+        "ects": 5,
+        "semester": 2,
+        "pruefungsleistungen": [
+          {
+            "name": "Qualitätssicherung im Softwareprozess",
+            "note": 2.3,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "IT-Architekturmanagement",
+        "ects": 5,
+        "semester": 2,
+        "pruefungsleistungen": [
+          {
+            "name": "IT-Architekturmanagement",
+            "note": 1,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "Programmierung von Webanwendungsoberflächen",
+        "ects": 5,
+        "semester": 2,
+        "pruefungsleistungen": [
+          {
+            "name": "Programmierung von Webanwendungsoberflächen",
+            "note": 1.7,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "Spezifikation",
+        "ects": 5,
+        "semester": 1,
+        "pruefungsleistungen": [
+          {
+            "name": "Spezifikation",
+            "note": 2.3,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "Grundlagen der objektorientierten Programmierung mit Java",
+        "ects": 5,
+        "semester": 1,
+        "pruefungsleistungen": [
+          {
+            "name": "Grundlagen der objektorientierten Programmierung mit Java",
+            "note": 2,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "Grundlagen der industriellen Softwaretechnik",
+        "ects": 5,
+        "semester": 1,
+        "pruefungsleistungen": [
+          {
+            "name": "Grundlagen der industriellen Softwaretechnik",
+            "note": 3.3,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "Requirements Engineering",
+        "ects": 5,
+        "semester": 1,
+        "pruefungsleistungen": [
+          {
+            "name": "Requirements Engineering",
+            "note": 2.3,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "Einführung in das wissenschaftliche Arbeiten für IT und Technik",
+        "ects": 5,
+        "semester": 1,
+        "pruefungsleistungen": [
+          {
+            "name": "Einführung in das wissenschaftliche Arbeiten für IT und Technik",
+            "note": 2.3,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "Datenmodellierung und Datenbanksysteme",
+        "ects": 5,
+        "semester": 1,
+        "pruefungsleistungen": [
+          {
+            "name": "Datenmodellierung und Datenbanksysteme",
+            "note": 2,
+            "status": "bestanden"
+          }
+        ]
+      },
+      {
+        "titel": "Kollaboratives Arbeiten",
+        "ects": 5,
+        "semester": 2,
+        "pruefungsleistungen": [
+          {
+            "name": "Kollaboratives Arbeiten",
+            "note": null,
+            "status": "anerkannt"
+          }
+        ]
+      },
+      {
+        "titel": "Einführung in Data Science",
+        "ects": 5,
+        "semester": 6,
+        "pruefungsleistungen": [
+          {
+            "name": "Einführung in Data Science",
+            "note": null,
+            "status": "eingebucht"
+          }
+        ]
+      },
+      {
+        "titel": "Projekt: Objektorientierte und funktionale Programmierung mit Python",
+        "ects": 5,
+        "semester": 6,
+        "pruefungsleistungen": [
+          {
+            "name": "Projekt: Objektorientierte und funktionale Programmierung mit Python",
+            "note": null,
+            "status": "eingebucht"
+          }
+        ]
+      }
+    ]
+  }
+}

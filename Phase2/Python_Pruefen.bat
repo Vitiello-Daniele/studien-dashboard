@@ -2,11 +2,10 @@
 setlocal EnableExtensions DisableDelayedExpansion
 chcp 65001 >nul
 title phase 2: python-prüfung
-set "phase2Python=%APPDATA%\uv\python\cpython-3.13.14-windows-x86_64-none\python.exe"
 set "phase2Ergebnis=0"
 pushd "%~dp0"
 if errorlevel 1 goto ordner_fehler
-if not exist "%phase2Python%" goto python_fehler
+if not exist "%~dp0..\Phase3\Python_Ausfuehren.bat" goto python_fehler
 if /i "%~1"=="--ohne-pause" goto alle
 
 :menue
@@ -99,10 +98,14 @@ echo(
 echo ============================================================
 echo   testlauf: %phase2Auswahl%
 echo ============================================================
-"%phase2Python%" --version
+call "%~dp0..\Phase3\Python_Ausfuehren.bat" --version
+if errorlevel 1 (
+    set "phase2Ergebnis=1"
+    goto ergebnis
+)
 echo(
 if not exist "erprobung\%phase2Muster%" goto tests_fehlen
-"%phase2Python%" -B -X utf8 -m unittest discover -s erprobung -p "%phase2Muster%" -q
+call "%~dp0..\Phase3\Python_Ausfuehren.bat" -m unittest discover -s erprobung -p "%phase2Muster%" -q
 set "phase2Ergebnis=%errorlevel%"
 goto ergebnis
 
@@ -135,7 +138,8 @@ popd
 exit /b %phase2Ergebnis%
 
 :python_fehler
-echo [fehler] python wurde nicht gefunden: %phase2Python%
+echo [fehler] die gemeinsame python-startdatei in phase3 fehlt
+echo bitte das gesamte projekt entpacken und die ordnerstruktur beibehalten
 popd
 if /i not "%~1"=="--ohne-pause" pause
 exit /b 1
